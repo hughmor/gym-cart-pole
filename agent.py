@@ -4,9 +4,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as f
 from torch.autograd import Variable
+import sys
 
-MODEL_PATH = '/Users/Hugh/Documents/Coding/Reinforcement Learning/Open AI Gym Tests/Cart Pole'
 
+MODEL_PATH = sys.path[0] + '/models'
 
 class CartPoleAgent:
 
@@ -40,5 +41,4 @@ class NeuralNetwork(nn.Module):
         x = f.relu(self.dense2(x))
         x = f.relu(self.dense3(x))
         return x
-
 
